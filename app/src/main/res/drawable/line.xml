@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="line">
+            <solid android:color="@color/gray"/>
+            <!--  Change to desired background color  -->
+            <!--  Optional: Define border (stroke) for the circle  -->
+            <stroke android:width="0.5dp" android:color="@color/gray"/>
+            <!--  Optional border color  -->
+        </shape>
+    </item>
+</selector>

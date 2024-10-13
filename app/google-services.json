@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "690759891055",
+    "project_id": "login-5f760",
+    "storage_bucket": "login-5f760.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690759891055:android:bc23a6eaf2ee14bb89759a",
+        "android_client_info": {
+          "package_name": "com.example.project_chefino"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgyHJBfh5_R-FwZg5jPjBZbYh-ONxGPtQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

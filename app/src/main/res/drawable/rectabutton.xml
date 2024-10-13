@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <!-- Define rectangle shape -->
+            <solid android:color="#05B961" /> <!-- Button background color -->
+
+            <!-- Define corner radius for rounded effect -->
+            <corners android:radius="10dp" />
+
+            <!-- Optionally, you can add a border (stroke) -->
+            <stroke
+                android:width="0dp"
+                android:color="@color/white" /> <!-- Optional border color -->
+
+            <!-- Optional padding inside the button -->
+            <padding
+                android:left="10dp"
+                android:right="10dp"
+                android:top="5dp"
+                android:bottom="5dp" />
+        </shape>
+    </item>
+</selector>

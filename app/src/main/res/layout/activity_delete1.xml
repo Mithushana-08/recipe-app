@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mybackground"
+    tools:context=".Delete1"
+    >
+
+
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/baseline_arrow_back_24"
+            android:contentDescription="back button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023" />
+
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="294dp"
+            android:layout_height="90dp"
+            android:text="Delete Account"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.649"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.085" />
+
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="377dp"
+            android:layout_height="62dp"
+            android:text="If you need to delete an account and you're prompted to provide a reason "
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.197" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.55">
+
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rectabutton"
+                android:backgroundTint="@color/white"
+                android:paddingLeft="10dp"
+                android:text="No longer using the service/platform"
+                tools:layout_editor_absoluteX="25dp"
+                tools:layout_editor_absoluteY="256dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton5"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rectabutton"
+                android:backgroundTint="@color/white"
+                android:paddingLeft="10dp"
+                android:text="Difficulty navigating the platform"
+                tools:layout_editor_absoluteX="25dp"
+                tools:layout_editor_absoluteY="400dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton6"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rectabutton"
+                android:backgroundTint="@color/white"
+                android:paddingLeft="10dp"
+                android:text="Account security concerns"
+                tools:layout_editor_absoluteX="25dp"
+                tools:layout_editor_absoluteY="448dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton7"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rectabutton"
+                android:backgroundTint="@color/white"
+                android:paddingLeft="10dp"
+                android:text="Personal reasons"
+                tools:layout_editor_absoluteX="25dp"
+                tools:layout_editor_absoluteY="496dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rectabutton"
+                android:backgroundTint="@color/white"
+                android:paddingLeft="10dp"
+                android:text="Privacy concerns"
+                tools:layout_editor_absoluteX="25dp"
+                tools:layout_editor_absoluteY="352dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton8"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rectabutton"
+                android:backgroundTint="@color/white"
+                android:paddingLeft="10dp"
+                android:text="Others"
+                tools:layout_editor_absoluteX="25dp"
+                tools:layout_editor_absoluteY="544dp" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="378dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="340dp"
+            android:backgroundTint="@color/green"
+            android:text="Delete"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.888" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

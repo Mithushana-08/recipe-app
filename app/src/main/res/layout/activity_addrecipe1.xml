@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@color/mybackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addrecipe1">
+
+        <!-- Scrollable content -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Add Recipe"
+                            android:textColor="@color/white"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/text1"
+                            android:layout_marginTop="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NAME"
+                            android:textColor="@color/white"
+                            android:textSize="19sp" />
+
+                        <EditText
+                            android:id="@+id/textInput1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/greenbox"
+                            android:hint="name"
+                            android:inputType="text"
+                            android:padding="16dp"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CATEGORY"
+                            android:layout_marginTop="30dp"
+                            android:textColor="@color/white"
+                            android:textSize="19sp" />
+
+                        <EditText
+                            android:id="@+id/textInput2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/greenbox"
+                            android:hint="category"
+                            android:inputType="text"
+                            android:padding="16dp"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/text3"
+                            android:layout_marginTop="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ingredients"
+                            android:textColor="@color/white"
+                            android:textSize="19sp" />
+
+                        <EditText
+                            android:id="@+id/textInput3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/greenbox"
+                            android:hint="ingredients"
+                            android:inputType="textMultiLine"
+                            android:minLines="3"
+                            android:maxLines="6"
+                            android:scrollbars="vertical"
+                            android:gravity="top"
+                            android:padding="16dp"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/text4"
+                            android:layout_marginTop="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Preparing time"
+                            android:textColor="@color/white"
+                            android:textSize="19sp" />
+
+                        <EditText
+                            android:id="@+id/textInput4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/greenbox"
+                            android:hint="enter time"
+                            android:inputType="text"
+                            android:padding="16dp"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/btn_upload_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Upload Image"
+                            android:layout_marginTop="30dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="#00BC5D"
+                            android:textSize="18sp"
+                            android:layout_gravity="center" />
+
+                        <ImageView
+                            android:id="@+id/img_recipe_preview"
+                            android:layout_width="300dp"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="Recipe Image Preview"
+                            android:scaleType="centerCrop" />
+
+                        <Button
+                            android:id="@+id/btn_upload_video"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Upload Video"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="#00BC5D"
+                            android:textSize="18sp"
+                            android:layout_marginTop="30dp"
+                            android:layout_gravity="center" />
+
+                        <VideoView
+                            android:id="@+id/video_recipe_preview"
+                            android:layout_width="300dp"
+                            android:layout_height="200dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="Recipe Video Preview" />
+
+                        <Button
+                            android:id="@+id/btn_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#00BC5D"
+                            android:text="Add +"
+                            android:layout_marginTop="30dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center" />
+                </LinearLayout>
+        </ScrollView>
+
+        <!-- Bottom navigation bar fixed at the bottom -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:backgroundTint="@color/green"
+            android:background="?android:attr/windowBackground"
+            android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="88dp"
+                    android:layout_height="59dp"
+                    app:srcCompat="@drawable/baseline_home_24" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="77dp"
+                    android:layout_height="57dp"
+                    app:srcCompat="@drawable/baseline_search_24" />
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="70dp"
+                    android:layout_height="49dp"
+                    app:srcCompat="@drawable/baseline_bookmark_24" />
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="92dp"
+                    android:layout_height="57dp"
+                    app:srcCompat="@drawable/baseline_person_24" />
+        </LinearLayout>
+
+</LinearLayout>

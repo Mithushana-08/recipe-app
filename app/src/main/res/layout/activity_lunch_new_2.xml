@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mybackground">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bookmarks"
+        android:textSize="32sp"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+
+
+
+    <!-- RecyclerView for lunch recipes -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lunchRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleTextView"
+        android:layout_above="@+id/toolbar"
+        android:padding="16dp"/>
+
+    <!-- Toolbar at the bottom -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="#00BB5D"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="99dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/baseline_home_24" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="77dp"
+        android:layout_height="57dp"
+        android:layout_toEndOf="@id/imageView6"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/baseline_search_24" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="97dp"
+        android:layout_height="57dp"
+        android:layout_toEndOf="@id/imageView7"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/baseline_bookmark_24" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="104dp"
+        android:layout_height="61dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/baseline_person_24"
+       />
+
+
+
+
+</RelativeLayout>
+
+

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mybackground"
+    tools:context=".review1">
+
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button"
+            android:layout_width="379dp"
+            android:layout_height="48dp"
+            android:background="@drawable/rectabutton"
+            android:text="Next"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.950" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="131dp"
+            android:layout_height="28dp"
+            android:text="Choirul Syafril"
+            android:textAlignment="center"
+            android:textColor="#50C878"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.453"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.237" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView"
+            android:layout_width="125dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="588dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:shapeAppearance="@style/roundedImageView"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar"
+            android:layout_width="380dp"
+            android:layout_height="34dp"
+            android:background="@drawable/rectabutton"
+            android:backgroundTint="@android:color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.419"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.301" />
+
+    <!-- Radio Group -->
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How was Your experience?"
+            android:textColor="@color/white"
+            android:textSize="21dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.101"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.381" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/back"
+        android:layout_width="56dp"
+        android:layout_height="53dp"
+        android:layout_margin="16dp"
+        android:contentDescription="Floating Action Button"
+        app:elevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044"
+        app:srcCompat="@drawable/baseline_arrow_back_24"
+        />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="375dp"
+            android:layout_height="69dp"
+            android:fontFamily=""
+            android:text="We hope you’re looking forward to your recipe! It would be lovely to know what you thought of your life experience."
+            android:textColor="#DADADA"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.459" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.78"
+        app:layout_constraintHorizontal_bias="0.5">
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="386dp"
+            android:layout_height="50dp"
+            android:background="@drawable/radio_background"
+            android:buttonTint="@color/black"
+            android:layoutDirection="rtl"
+            android:paddingLeft="20dp"
+            android:text="I did not like it"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/radio_background"
+            android:buttonTint="@color/black"
+            android:layoutDirection="rtl"
+            android:paddingLeft="20dp"
+            android:text="It was ok"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/radio_background"
+            android:buttonTint="@color/black"
+            android:layoutDirection="rtl"
+            android:paddingLeft="20dp"
+            android:text="It was great!"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radio4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/radio_background"
+            android:buttonTint="@color/black"
+            android:layoutDirection="rtl"
+            android:paddingLeft="20dp"
+            android:text="It was terrible"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
