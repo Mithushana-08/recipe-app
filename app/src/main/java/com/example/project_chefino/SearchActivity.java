@@ -17,13 +17,13 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-// Activity for searching recipes in the app
+
 public class SearchActivity extends AppCompatActivity {
 
     private androidx.appcompat.widget.SearchView searchView;
     private RecyclerView recyclerView;
-    private LunchRecipeAdapter recipeAdapter; // Custom adapter for your RecyclerView
-    private ArrayList<LunchRecipe> recipeList; // A list to hold recipe objects
+    private LunchRecipeAdapter recipeAdapter;
+    private ArrayList<LunchRecipe> recipeList;
     private DatabaseReference databaseReference;
 
     @Override

@@ -6,20 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mybackground"
-    tools:context=".search">
-
-
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="607dp"
-            android:layout_height="254dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-             />
+    >
 
         <TextView
             android:id="@+id/textView4"
@@ -74,58 +61,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="88dp"
-            android:layout_height="59dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.015"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            />
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="77dp"
-            android:layout_height="57dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.309"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            />
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="70dp"
-            android:layout_height="49dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.703"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-             />
-
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="92dp"
-            android:layout_height="57dp"
-            android:layout_marginTop="40dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/materialToolbar2"
-            app:layout_constraintVertical_bias="1.0"
-          />
-
-
-
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
@@ -195,8 +130,5 @@
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/baseline_person_24"
             app:tint="@color/black" />
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

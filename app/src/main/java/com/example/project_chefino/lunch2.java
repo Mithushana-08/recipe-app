@@ -24,18 +24,18 @@ import java.util.List;
 
 public class lunch2 extends AppCompatActivity {// Declare the lunch2 class extending AppCompatActivity
 
-    private RecyclerView lunchRecyclerView;// RecyclerView for displaying lunch recipes
-    private LunchRecipeAdapter lunchRecipeAdapter;// Adapter for the RecyclerView
-    private List<LunchRecipe> recipeList;// List to hold LunchRecipe objects
+    private RecyclerView lunchRecyclerView;
+    private LunchRecipeAdapter lunchRecipeAdapter;
+    private List<LunchRecipe> recipeList;
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {// Method called when activity is created
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lunch2);// Set the layout for this activity
+        setContentView(R.layout.activity_lunch2);
 
         lunchRecyclerView = findViewById(R.id.lunchRecyclerView);// Get the RecyclerView from the layout
-        lunchRecyclerView.setLayoutManager(new LinearLayoutManager(this));// Set the layout manager to arrange items vertically
+        lunchRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Initialize the list to hold recipes
         recipeList = new ArrayList<>();
@@ -69,7 +69,7 @@ public class lunch2 extends AppCompatActivity {// Declare the lunch2 class exten
                     bookmarkRef.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot bookmarkSnapshot) {// Callback for bookmark data change
-                            boolean isBookmarked = bookmarkSnapshot.exists(); // check if recipe is already bookmarked
+                            boolean isBookmarked = bookmarkSnapshot.exists();
 
                             // Create a new LunchRecipe object
                             LunchRecipe lunchRecipe = new LunchRecipe(name, preTime, image, cal, isBookmarked,vedio,id,"lunch");

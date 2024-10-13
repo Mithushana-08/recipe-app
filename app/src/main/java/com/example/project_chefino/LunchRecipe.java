@@ -1,11 +1,11 @@
 package com.example.project_chefino;
 
 public class LunchRecipe {// declare class
-    private String name;// Name of the recipe
-    private String description; // This can be the preparation time or a separate description
-    private String image; // Change this to String to hold the URL
-    private String cal; // Added for calorie count
-    private boolean isBookmarked;// Indicates if the recipe is bookmarked by the user
+    private String name;
+    private String description;
+    private String image;
+    private String cal;
+    private boolean isBookmarked;
     private String vedio;
     private String id;
     private String category;
