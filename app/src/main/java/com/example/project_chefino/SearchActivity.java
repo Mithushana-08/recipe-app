@@ -17,7 +17,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-
+// Activity for searching recipes in the app
 public class SearchActivity extends AppCompatActivity {
 
     private androidx.appcompat.widget.SearchView searchView;
@@ -99,6 +99,7 @@ public class SearchActivity extends AppCompatActivity {
             }
 
             @Override
+            // Handle errors if the database query is cancelled
             public void onCancelled(DatabaseError databaseError) {
                 Toast.makeText(SearchActivity.this, "Error: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
             }
