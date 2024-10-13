@@ -22,7 +22,7 @@ public class home extends AppCompatActivity {
         // Change the status bar color to black
         getWindow().setStatusBarColor(getResources().getColor(android.R.color.black));
 
-        // Initialize buttons
+        // Initialize buttons by linking them to their respective views in the layout
         Button breakfastButton = findViewById(R.id.button1);
         Button lunchButton = findViewById(R.id.button2);
         Button dinnerButton = findViewById(R.id.button3);
