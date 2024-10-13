@@ -13,9 +13,9 @@ public class LunchRecipe {// declare class
     // Default constructor required for calls to DataSnapshot.getValue(LunchRecipe.class)
     public LunchRecipe() {
     }
-
+    // Parameterized constructor to initialize a LunchRecipe object with given values
     public LunchRecipe(String name, String preTime, String image, String cal, boolean isBookmarked,String video,String id,String category) {
-        this.name = name;
+        this.name = name;// Set the recipe name
         this.description = preTime;
         this.image = image;
         this.isBookmarked = isBookmarked;
@@ -25,7 +25,7 @@ public class LunchRecipe {// declare class
     }
 
 
-    // Getters
+    // Getters & setters
     public String getname() {
         return name;
     }
@@ -59,9 +59,9 @@ public class LunchRecipe {// declare class
 
     public boolean isBookmarked() {
         return isBookmarked;
-    }
+    }  // Method to check if the recipe is bookmarked
 
     public void setBookmarked(boolean bookmarked) {
         isBookmarked = bookmarked;
     }
-}
+} // Setter for the bookmark status
