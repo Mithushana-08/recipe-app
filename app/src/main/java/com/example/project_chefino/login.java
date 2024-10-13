@@ -19,16 +19,17 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class login extends AppCompatActivity {
-
+    // Class declaration for UI components & firebase authentication
     private EditText emailEditText, passwordEditText;
     private Button loginButton;
     private TextView forgotPasswordTextView, signUpTextView;
     private FirebaseAuth firebaseAuth;
 
+    // first method that runs when the activity is created
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);  // Assuming your XML is named login.xml
+        setContentView(R.layout.activity_login);  // set the layout ,XML is named login.xml
 
         getWindow().setStatusBarColor(getResources().getColor(android.R.color.black));
 
