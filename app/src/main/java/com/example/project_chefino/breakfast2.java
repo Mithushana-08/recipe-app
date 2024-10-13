@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class breakfast2 extends AppCompatActivity {
-
+    // Declare RecyclerView and adapter for displaying breakfast recipes
     private RecyclerView lunchRecyclerView;
     private LunchRecipeAdapter lunchRecipeAdapter;
     private List<LunchRecipe> recipeList;
