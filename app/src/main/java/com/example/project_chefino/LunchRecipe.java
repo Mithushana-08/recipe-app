@@ -1,11 +1,11 @@
 package com.example.project_chefino;
 
-public class LunchRecipe {
-    private String name;
+public class LunchRecipe {// declare class
+    private String name;// Name of the recipe
     private String description; // This can be the preparation time or a separate description
     private String image; // Change this to String to hold the URL
     private String cal; // Added for calorie count
-    private boolean isBookmarked;
+    private boolean isBookmarked;// Indicates if the recipe is bookmarked by the user
     private String vedio;
     private String id;
     private String category;
@@ -13,9 +13,9 @@ public class LunchRecipe {
     // Default constructor required for calls to DataSnapshot.getValue(LunchRecipe.class)
     public LunchRecipe() {
     }
-
+    // Parameterized constructor to initialize a LunchRecipe object with given values
     public LunchRecipe(String name, String preTime, String image, String cal, boolean isBookmarked,String video,String id,String category) {
-        this.name = name;
+        this.name = name;// Set the recipe name
         this.description = preTime;
         this.image = image;
         this.isBookmarked = isBookmarked;
@@ -25,7 +25,7 @@ public class LunchRecipe {
     }
 
 
-    // Getters
+    // Getters & setters
     public String getname() {
         return name;
     }
@@ -59,9 +59,9 @@ public class LunchRecipe {
 
     public boolean isBookmarked() {
         return isBookmarked;
-    }
+    }  // Method to check if the recipe is bookmarked
 
     public void setBookmarked(boolean bookmarked) {
         isBookmarked = bookmarked;
     }
-}
+} // Setter for the bookmark status

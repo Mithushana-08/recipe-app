@@ -32,7 +32,9 @@ public class home extends AppCompatActivity {
         profileButton = findViewById(R.id.imageView13);
         searchButton = findViewById(R.id.imageView7); // Search button (ImageView)
         savedButton = findViewById(R.id.imageView9); // New Saved button (ImageView)
+
         // Set onClick listeners for each button
+        // Set onClick listener for breakfast button to navigate to the breakfast activity
         breakfastButton.setOnClickListener(v -> {
             Intent intent = new Intent(home.this, breakfast2.class);
             startActivity(intent);
@@ -58,6 +60,7 @@ public class home extends AppCompatActivity {
             startActivity(intent);
         });
 
+        // Set onClick listener for profile button to navigate to the profile activity
         profileButton.setOnClickListener(v -> {
             Intent intent = new Intent(home.this, profile11.class);
             startActivity(intent);

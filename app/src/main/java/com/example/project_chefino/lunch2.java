@@ -50,14 +50,14 @@ public class lunch2 extends AppCompatActivity {// Declare the lunch2 class exten
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("recipes/lunch");// Get reference to the "recipes/lunch" node in Firebase
         //String recipeId = databaseReference.push().getKey();
 
-        // Fetch data from Firebase and update the list
+
         // Fetch data from Firebase and update the list
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 recipeList.clear(); // Clear the list before adding new data
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    String name = snapshot.child("name").getValue(String.class);
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {// Callback for data change
+                    String name = snapshot.child("name").getValue(String.class);//get information
                     String cal = snapshot.child("cal").getValue(String.class);
                     String image = snapshot.child("image").getValue(String.class);
                     String preTime = snapshot.child("pre_time").getValue(String.class);
@@ -68,8 +68,8 @@ public class lunch2 extends AppCompatActivity {// Declare the lunch2 class exten
                     DatabaseReference bookmarkRef = FirebaseDatabase.getInstance().getReference("bookmarked").child(userId).child(name);
                     bookmarkRef.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
-                        public void onDataChange(DataSnapshot bookmarkSnapshot) {
-                            boolean isBookmarked = bookmarkSnapshot.exists(); // True if recipe is already bookmarked
+                        public void onDataChange(DataSnapshot bookmarkSnapshot) {// Callback for bookmark data change
+                            boolean isBookmarked = bookmarkSnapshot.exists(); // check if recipe is already bookmarked
 
                             // Create a new LunchRecipe object
                             LunchRecipe lunchRecipe = new LunchRecipe(name, preTime, image, cal, isBookmarked,vedio,id,"lunch");
@@ -80,7 +80,7 @@ public class lunch2 extends AppCompatActivity {// Declare the lunch2 class exten
                         }
 
                         @Override
-                        public void onCancelled(DatabaseError databaseError) {
+                        public void onCancelled(DatabaseError databaseError) {// Handle database errors
                             // Handle possible errors
                         }
                     });
@@ -88,7 +88,7 @@ public class lunch2 extends AppCompatActivity {// Declare the lunch2 class exten
             }
 
             @Override
-            public void onCancelled(DatabaseError databaseError) {
+            public void onCancelled(DatabaseError databaseError) {// Handle database errors
                 // Handle possible errors
             }
         });
