@@ -19,20 +19,22 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class recipescrollview extends AppCompatActivity {
-    private TextView ingredientsText, recipeName;
-    private VideoView videoView;
-    private String recipeId, category;
+    // Declare UI elements and variables
+    private TextView ingredientsText, recipeName;// TextView for displaying ingredients and recipe name
+    private VideoView videoView;// VideoView for displaying the recipe video
+    private String recipeId, category;// Variables to hold recipe ID and category passed from the previous activity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recipescrollview);
+        setContentView(R.layout.activity_recipescrollview);// Set the layout for this activity
 
         // Initialize Views
-        videoView = findViewById(R.id.recipe_video_view1);
-        Button addReviewButton = findViewById(R.id.btn_add_review);
+        videoView = findViewById(R.id.recipe_video_view1);// VideoView for the recipe video
+        Button addReviewButton = findViewById(R.id.btn_add_review);// Button to add a review
         ingredientsText = findViewById(R.id.tv_ingredients_list);
-        recipeName = findViewById(R.id.recipeName);
+        recipeName = findViewById(R.id.recipeName);// TextView to display the recipe name
+
 
         // Get Intent data
         recipeId = getIntent().getStringExtra("recipeId");
@@ -57,6 +59,7 @@ public class recipescrollview extends AppCompatActivity {
         });
     }
 
+    // Method to load recipe data from Firebase using the recipe ID and category
     private void loadRecipeData(String recipeId, String categoryThis) {
         DatabaseReference recipeRef = FirebaseDatabase.getInstance().getReference("recipes").child(categoryThis).child(recipeId);
         recipeRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -85,7 +88,7 @@ public class recipescrollview extends AppCompatActivity {
                     Toast.makeText(recipescrollview.this, "Recipe not found", Toast.LENGTH_SHORT).show();
                 }
             }
-
+            // Show an error message if the data retrieval fails
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(recipescrollview.this, "Failed to load recipe: " + error.getMessage(), Toast.LENGTH_SHORT).show();
