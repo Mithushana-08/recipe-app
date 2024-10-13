@@ -38,6 +38,7 @@ public class signup extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         // Initialize UI components
+        // Find the EditText view for email input by its ID (editTextEmail1) in the layout & same for others
         emailEditText = findViewById(R.id.editTextEmail1);
         passwordEditText = findViewById(R.id.password1);
         confirmPasswordEditText = findViewById(R.id.password2);
@@ -53,6 +54,7 @@ public class signup extends AppCompatActivity {
         });
 
         // Set listener for the sign-in text (if the user already has an account)
+        // Set a click listener on the sign-up button (signUpButton)
         signInTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,10 +67,12 @@ public class signup extends AppCompatActivity {
 
     // Method to register the user
     private void registerUser() {
+        // Get the user's input for the email, removing any leading or trailing whitespace and same for others
         String email = emailEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
         String confirmPassword = confirmPasswordEditText.getText().toString().trim();
 
+        // Check if the email input is empty; if so, prompt the user to enter an email & same for othrs
         if (TextUtils.isEmpty(email)) {
             Toast.makeText(signup.this, "Please enter your email", Toast.LENGTH_SHORT).show();
         } else if (TextUtils.isEmpty(password)) {
@@ -77,6 +81,7 @@ public class signup extends AppCompatActivity {
             Toast.makeText(signup.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
         } else {
             // Use FirebaseAuth to create a new user
+            // If all checks pass, use FirebaseAuth to create a new user with the provided email and password
             mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, task -> {
                         if (task.isSuccessful()) {
