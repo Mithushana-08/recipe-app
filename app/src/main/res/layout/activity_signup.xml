@@ -120,7 +120,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="403dp"
             android:layout_marginEnd="177dp"
-            android:text="Confirmed Passswod"
+            android:text="Confirm Passsword"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -135,7 +135,7 @@
             android:background="@drawable/greenbox"
             android:backgroundTint="@color/white"
             android:ems="10"
-            android:hint="Reenter your Password"
+            android:hint="Re-Enter your Password"
             android:inputType="text"
             android:padding="12dp"
             android:textColor="#707070"

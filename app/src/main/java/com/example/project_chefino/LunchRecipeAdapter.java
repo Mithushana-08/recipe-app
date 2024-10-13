@@ -17,16 +17,18 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
+// Adapter class for displaying lunch recipes in a RecyclerView
 public class LunchRecipeAdapter extends RecyclerView.Adapter<LunchRecipeAdapter.RecipeViewHolder> {
 
     private List<LunchRecipe> recipeList;
-
+    // Constructor to initialize the adapter with the list of recipes
     public LunchRecipeAdapter(List<LunchRecipe> recipeList) {
         this.recipeList = recipeList;
     }
 
     @NonNull
     @Override
+    // Create new view holders for the RecyclerView
     public RecipeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.activity_lunch_item_recipe, parent, false);
@@ -34,8 +36,9 @@ public class LunchRecipeAdapter extends RecyclerView.Adapter<LunchRecipeAdapter.
     }
 
     @Override
+    // Bind data to the view holder for each recipe
     public void onBindViewHolder(@NonNull RecipeViewHolder holder, int position) {
-        LunchRecipe recipe = recipeList.get(position);
+        LunchRecipe recipe = recipeList.get(position); // Get the recipe at the current position
         holder.recipeNameTextView.setText(recipe.getname());
         holder.recipeDescriptionTextView.setText(recipe.getpre_time());
         //holder.recipeImageView.setImageResource(recipe.getImage());
@@ -97,6 +100,7 @@ public class LunchRecipeAdapter extends RecyclerView.Adapter<LunchRecipeAdapter.
     }
 
     @Override
+    // Return the total number of recipes
     public int getItemCount() {
         return recipeList.size();
     }
@@ -109,6 +113,7 @@ public class LunchRecipeAdapter extends RecyclerView.Adapter<LunchRecipeAdapter.
         ImageView bookmarkIcon;
 
 
+        // Constructor for the RecipeViewHolder
         public RecipeViewHolder(@NonNull View itemView) {
             super(itemView);
             recipeNameTextView = itemView.findViewById(R.id.recipeNameTextView);

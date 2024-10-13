@@ -14,13 +14,18 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class forgot extends AppCompatActivity {
 
+
+    // Declare a FirebaseAuth object to manage Firebase Authentication operations and similar for oterd
     private FirebaseAuth mAuth;
     private EditText emailInput;
     private Button submitButton;
 
     @Override
+    // Override the onCreate method, which is called when the activity is first created
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Set the user interface layout for this activity to the specified XML layout (activity_forgot.xml)
         setContentView(R.layout.activity_forgot);  // Link to your forgot.xml layout
         getWindow().setStatusBarColor(getResources().getColor(android.R.color.black));
 
@@ -28,6 +33,7 @@ public class forgot extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         // Initialize the views
+        // Initialize the EditText view for user input of email or phone number by finding it by its ID (emailorphone) in the layout
         emailInput = findViewById(R.id.emailorphone);  // EditText
         submitButton = findViewById(R.id.submit2);      // Button
 
@@ -60,9 +66,11 @@ public class forgot extends AppCompatActivity {
 
     // Method to reset the password using Firebase
     private void resetPassword(String email) {
+        // Send a password reset email to the provided email address using Firebase Auth
         mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
+                // Check if the task to send the email was successful
                 if (task.isSuccessful()) {
                     Toast.makeText(forgot.this, "Check your email to reset your password!", Toast.LENGTH_LONG).show();
                 } else {

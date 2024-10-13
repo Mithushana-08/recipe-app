@@ -24,26 +24,29 @@ import java.util.List;
 
 public class save extends AppCompatActivity {
 
-    private RecyclerView lunchRecyclerView;
-    private LunchRecipeAdapter_new lunchRecipeAdapter;
-    private List<LunchRecipe> recipeList;
+    private RecyclerView lunchRecyclerView;//display a list of recipes
+    private LunchRecipeAdapter_new lunchRecipeAdapter;//handles the display of recipe items in the RecyclerView.
+    private List<LunchRecipe> recipeList;//that holds LunchRecipe objects, which represent the individual recipes
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lunch_new_2);
+        setContentView(R.layout.activity_lunch_new_2);//Sets the layout for this activity using the XML file
 
+        //Gets a reference to the RecyclerView defined in the layout XML.
         lunchRecyclerView = findViewById(R.id.lunchRecyclerView);
+        //Sets a layout manager for the RecyclerView, arranging items in a vertical list.
         lunchRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Initialize the list
         recipeList = new ArrayList<>();
 
         // Initialize the adapter with the list and set it to RecyclerView
-        lunchRecipeAdapter = new LunchRecipeAdapter_new(recipeList);
-        lunchRecyclerView.setAdapter(lunchRecipeAdapter);
-        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        lunchRecipeAdapter = new LunchRecipeAdapter_new(recipeList); //Retrieves the currently authenticated user
+        lunchRecyclerView.setAdapter(lunchRecipeAdapter);//Gets the unique user ID
+        //Creates a reference to the "bookmarked" node in the Firebase database specific to the current user
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();//
         String userId = currentUser.getUid();
         // Get Firebase reference
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("bookmarked/"+userId);
